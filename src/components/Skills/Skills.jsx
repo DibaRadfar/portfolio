@@ -3,35 +3,88 @@ import { useState } from "react";
 const mainSkills = [
   {
     name: "Tailwind CSS",
-    img: "../../../public/img/Tailwindcss.png",
+    img: "../../../public/img/Tailwind.svg",
     desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز.",
   },
   {
     name: "Sass",
-    img: "../../../public/img/sass.png",
+    img: "../../../public/img/sass.svg",
     desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز.",
   },
-  { name: "JavaScript", img: "../../../public/img/js.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "CSS", img: "../../../public/img/css.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "HTML", img: "../../../public/img/html.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Redux", img: "../../../public/img/redux.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "React", img: "../../../public/img/react.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "TypeScript", img: "../../../public/img/typescript.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Bootstrap", img: "../../../public/img/bootstrap.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Next.js", img: "../../../public/img/next.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
+  { name: "JavaScript", 
+    img: "../../../public/img/javascript.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "CSS",
+    img: "../../../public/img/css.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "HTML",
+    img: "../../../public/img/html.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "Redux",
+    img: "../../../public/img/redux.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "React",
+    img: "../../../public/img/react.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "TypeScript",
+    img: "../../../public/img/typescript.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "Bootstrap",
+    img: "../../../public/img/bootstrap.png",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Next.js",
+    img: "../../../public/img/nextjs.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
 ];
 
 const moreSkills = [
-  { name: "MySQL", img: "../../../public/img/mysql.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Laravel", img: "../../../public/img/laravel.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "PHP", img: "../../../public/img/php.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Git", img: "../../../public/img/git.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Docker", img: "../../../public/img/docker.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Photoshop", img: "../../../public/img/photoshop.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Figma", img: "../../../public/img/figma.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Dokploy", img: "../../../public/img/dokploy.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Redis", img: "../../../public/img/redis.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
-  { name: "Node.js", img: "../../../public/img/nodejs.png", desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
+  { name: "MySQL",
+    img: "../../../public/img/mysql.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Laravel",
+    img: "../../../public/img/laravel.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "PHP",
+    img: "../../../public/img/php.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "Git",
+    img: "../../../public/img/git.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Docker",
+    img: "../../../public/img/docker.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+   },
+  { name: "Photoshop",
+    img: "../../../public/img/photoshop.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Figma",
+    img: "../../../public/img/figma.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Dokploy",
+    img: "../../../public/img/dokploy.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Redis",
+    img: "../../../public/img/redis.svg",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز."
+  },
+  { name: "Node.js",
+    img: "../../../public/img/nodejs.png",
+    desc: "تسلط بر Tailwind CSS برای طراحی سریع، واکنش‌گرا و ماژولار رابط‌های کاربری با کدنویسی بهینه و ساختار تمیز." },
 ];
 
 const SkillCard = ({ name, img, desc }) => {
